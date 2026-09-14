@@ -33,6 +33,7 @@ Remote repository adalah salinan pekerjaan kita di tempat lain (internet/jaringa
 --- Perintah Membatalkan & Melihat Riwayat ---
 * `git reset`: Membatalkan penambahan ke staging area.
 * `git reset HEAD~1`: Membatalkan commit terakhir (perubahan tetap ada).
+* `git reset --hard HEAD~1`: Untuk Mengembalikan komit ke sebelumnya lalu untuk Mengembalikan file ke sebelumnya.
 * `git log`: Menampilkan riwayat commit.
 * `git log --oneline`: Menampilkan riwayat dengan lebih ringkas.
 
