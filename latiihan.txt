@@ -1,21 +1,21 @@
-RANGKUMAN SANTAI: PELATIHAN GIT, GITHUB, DAN MARKDOWN
+RANGKUMAN : PELATIHAN GIT, GITHUB, DAN MARKDOWN
 
 1. Kenalan dengan Version Control, Macam-macamnya, dan Git
-Version Control itu sistem yang ngebantu banget buat ngelacak dan ngelola perubahan file kita dari waktu ke waktu[cite: 1]. Nah, sistem ini punya 3 macam jenis yang terus berevolusi:
-- VCS Lokal: Generasi pertama yang pakai database sederhana buat nyimpen riwayat perubahan langsung di komputer kita sendiri[cite: 1]. Contohnya RCS[cite: 1].
-- VCS Terpusat (Client-Server): Dibikin karena developer mulai butuh kolaborasi beda komputer[cite: 1]. Ada satu server pusat yang nyimpen semua versi file[cite: 1]. Tapi bahaya, kalau server pusat rusak, kita bisa kehilangan seluruh project dan kita harus selalu terhubung ke server saat ngerjain project[cite: 1]. Contohnya CVS dan Subversion[cite: 1].
-- VCS Terdistribusi (Peer-to-Peer): Ini nih juaranya, dan Git masuk di kategori ini[cite: 1]! Di sini, setiap komputer (client) punya salinan lengkap dari keseluruhan repository beserta riwayatnya[cite: 1]. Jadi kalau server utama rusak, kita nggak perlu panik karena bisa mulihin datanya pakai salinan di komputer kita[cite: 1]. Contoh lain selain Git ada Mercurial[cite: 1].
+Version Control itu sistem yang ngebantu banget buat ngelacak dan ngelola perubahan file kita dari waktu ke waktu. Nah, sistem ini punya 3 macam jenis yang terus berevolusi:
+- VCS Lokal: Generasi pertama yang pakai database sederhana buat nyimpen riwayat perubahan langsung di komputer kita sendiri. Contohnya RCS.
+- VCS Terpusat (Client-Server): Dibikin karena developer mulai butuh kolaborasi beda komputer. Ada satu server pusat yang nyimpen semua versi file. Tapi bahaya, kalau server pusat rusak, kita bisa kehilangan seluruh project dan kita harus selalu terhubung ke server saat ngerjain project. Contohnya CVS dan Subversion.
+- VCS Terdistribusi (Peer-to-Peer): Ini nih juaranya, dan Git masuk di kategori ini! Di sini, setiap komputer (client) punya salinan lengkap dari keseluruhan repository beserta riwayatnya. Jadi kalau server utama rusak, kita nggak perlu panik karena bisa mulihin datanya pakai salinan di komputer kita. Contoh lain selain Git ada Mercurial.
 
-Git sendiri adalah VCS terdistribusi yang gratis, open source, dan paling banyak dipakai saat ini[cite: 1]. Git ngebantu banget buat ngelacak riwayat perubahan, kerja bareng tim jarak jauh, sampai bikin cabang (branching) dan gabungin kerjaan (merging)[cite: 1]. Perintah dasarnya gampang: pakai `git init` buat bikin repository, `git add` buat masukin file ke area persiapan, dan `git commit` buat nyimpen perubahannya secara resmi[cite: 1].
+Git sendiri adalah VCS terdistribusi yang gratis, open source, dan paling banyak dipakai saat ini. Git ngebantu banget buat ngelacak riwayat perubahan, kerja bareng tim jarak jauh, sampai bikin cabang (branching) dan gabungin kerjaan (merging). Perintah dasarnya gampang: pakai `git init` buat bikin repository, `git add` buat masukin file ke area persiapan, dan `git commit` buat nyimpen perubahannya secara resmi.
 
 2. GitHub dan Remote Repository
-Kalau kita mau nyimpen salinan kerjaan (repository) di tempat lain, kita sebut itu sebagai remote repository[cite: 1]. Nah, GitHub ini ibarat rumah atau tempat hosting buat nyimpen repository Git kita secara online alias remote[cite: 1]. Sebenarnya ada juga platform lain kayak GitLab, tapi GitHub ini yang paling populer dan banyak banget dipakai di dunia kerja[cite: 1].
+Kalau kita mau nyimpen salinan kerjaan (repository) di tempat lain, kita sebut itu sebagai remote repository. Nah, GitHub ini ibarat rumah atau tempat hosting buat nyimpen repository Git kita secara online alias remote. Sebenarnya ada juga platform lain kayak GitLab, tapi GitHub ini yang paling populer dan banyak banget dipakai di dunia kerja.
 
-Buat ngehubungin project lokal di laptop kita ke GitHub, kita tinggal ketik perintah `git remote add origin <url>`[cite: 1]. Kalau udah nyambung, kita bisa meng-upload simpenan kerjaan kita dari lokal ke GitHub pakai perintah `git push`[cite: 1]. Sebaliknya, kalau kita mau mengunduh (download) perubahan terbaru dari GitHub ke laptop kita, kita bisa pakai `git fetch` atau `git pull`[cite: 1].
+Buat ngehubungin project lokal di laptop kita ke GitHub, kita tinggal ketik perintah `git remote add origin <url>`. Kalau udah nyambung, kita bisa meng-upload simpenan kerjaan kita dari lokal ke GitHub pakai perintah `git push`. Sebaliknya, kalau kita mau mengunduh (download) perubahan terbaru dari GitHub ke laptop kita, kita bisa pakai `git fetch` atau `git pull`.
 
 3. Serunya Menulis dengan Markdown
-Terakhir, kita belajar soal Markdown. Ini tuh format penulisan dokumen yang jadi favorit banget di kalangan developer dan programmer, biasanya dipakai buat nulis file README di repository GitHub[cite: 1]. Cara nulisnya asyik dan gampang banget kok, ini beberapa contoh sintaks dasarnya:
-- Tinggal pakai simbol pagar (#) sebelum teks kalau mau bikin judul atau Heading[cite: 1].
-- Mau bikin teks tebal? Pakai tanda bintang ganda (**), sedangkan kalau mau miring cukup pakai bintang tunggal (*)[cite: 1].
-- Buat bikin urutan atau list (daftar), kita bisa pakai angka biasa atau tanda hubung (-)[cite: 1].
-- Kalau mau nyelipin link, ketik aja `[teks](url)` dan buat masukin gambar tinggal tambahin tanda seru di depannya jadi `![teks](url)`[cite: 1].
+Terakhir, kita belajar soal Markdown. Ini tuh format penulisan dokumen yang jadi favorit banget di kalangan developer dan programmer, biasanya dipakai buat nulis file README di repository GitHub. Cara nulisnya asyik dan gampang banget kok, ini beberapa contoh sintaks dasarnya:
+- Tinggal pakai simbol pagar (#) sebelum teks kalau mau bikin judul atau Heading.
+- Mau bikin teks tebal? Pakai tanda bintang ganda (**), sedangkan kalau mau miring cukup pakai bintang tunggal (*).
+- Buat bikin urutan atau list (daftar), kita bisa pakai angka biasa atau tanda hubung (-).
+- Kalau mau nyelipin link, ketik aja `[teks](url)` dan buat masukin gambar tinggal tambahin tanda seru di depannya jadi `![teks](url)`.
