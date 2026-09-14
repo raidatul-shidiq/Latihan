@@ -6,7 +6,7 @@ Pelacakan : kita mengetahui Setiap perubahan yang terjadi.
 Pengelolaan : gimana caranya agar kita bisa menggunakan kembali.
 
 Version Control System adalah Suatu sofware yang menjadi alat yang bisa melekukan mengatur perubahan sehingga kita bisa melakukan pelacakan dan pengelolaan.
-- VCS Lokal: Menyimpan riwayat perubahan di komputer sendiri. Contoh: RCS.
+- VCS Lokal: Menyimpan riwayat perubahan di komputer sendiri.
 - VCS Terpusat (Client-Server): Menyimpan semua versi file di satu server pusat. Risiko: jika server rusak, seluruh project bisa hilang.
 - VCS Terdistribusi (Peer-to-Peer): Setiap komputer memiliki salinan lengkap dari keseluruhan repository. Risiko data hilang lebih kecil.
 
