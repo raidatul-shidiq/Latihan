@@ -1,21 +1,51 @@
-RANGKUMAN : PELATIHAN GIT, GITHUB, DAN MARKDOWN
+RANGKUMAN PELATIHAN GIT, GITHUB, DAN MARKDOWN
 
-1. Kenalan dengan Version Control, Macam-macamnya, dan Git
-Version Control itu sistem yang ngebantu banget buat ngelacak dan ngelola perubahan file kita dari waktu ke waktu. Nah, sistem ini punya 3 macam jenis yang terus berevolusi:
-- VCS Lokal: Generasi pertama yang pakai database sederhana buat nyimpen riwayat perubahan langsung di komputer kita sendiri. Contohnya RCS.
-- VCS Terpusat (Client-Server): Dibikin karena developer mulai butuh kolaborasi beda komputer. Ada satu server pusat yang nyimpen semua versi file. Tapi bahaya, kalau server pusat rusak, kita bisa kehilangan seluruh project dan kita harus selalu terhubung ke server saat ngerjain project. Contohnya CVS dan Subversion.
-- VCS Terdistribusi (Peer-to-Peer): Ini nih juaranya, dan Git masuk di kategori ini! Di sini, setiap komputer (client) punya salinan lengkap dari keseluruhan repository beserta riwayatnya. Jadi kalau server utama rusak, kita nggak perlu panik karena bisa mulihin datanya pakai salinan di komputer kita. Contoh lain selain Git ada Mercurial.
+1. Version Control & Git
+Version Control adalah sistem untuk melacak dan mengelola perubahan file dari waktu ke waktu. Terdapat 3 jenis utama:
+- VCS Lokal: Menyimpan riwayat perubahan di komputer sendiri. Contoh: RCS.
+- VCS Terpusat (Client-Server): Menyimpan semua versi file di satu server pusat. Risiko: jika server rusak, seluruh project bisa hilang. Contoh: CVS, Subversion.
+- VCS Terdistribusi (Peer-to-Peer): Setiap komputer memiliki salinan lengkap dari keseluruhan repository. Risiko data hilang lebih kecil. Contoh: Git, Mercurial.
 
-Git sendiri adalah VCS terdistribusi yang gratis, open source, dan paling banyak dipakai saat ini. Git ngebantu banget buat ngelacak riwayat perubahan, kerja bareng tim jarak jauh, sampai bikin cabang (branching) dan gabungin kerjaan (merging). Perintah dasarnya gampang: pakai `git init` buat bikin repository, `git add` buat masukin file ke area persiapan, dan `git commit` buat nyimpen perubahannya secara resmi.
+Git adalah VCS terdistribusi yang gratis, open source, dan paling banyak dipakai. Git memudahkan pelacakan perubahan, kolaborasi jarak jauh, serta branching (membuat cabang) dan merging (menggabungkan).
 
-2. GitHub dan Remote Repository
-Kalau kita mau nyimpen salinan kerjaan (repository) di tempat lain, kita sebut itu sebagai remote repository. Nah, GitHub ini ibarat rumah atau tempat hosting buat nyimpen repository Git kita secara online alias remote. Sebenarnya ada juga platform lain kayak GitLab, tapi GitHub ini yang paling populer dan banyak banget dipakai di dunia kerja.
+--- Perintah Konfigurasi Git ---
+* `git config --list`: Menampilkan pengaturan Git.
+* `git config <key> <value>`: Mengubah nilai variabel.
 
-Buat ngehubungin project lokal di laptop kita ke GitHub, kita tinggal ketik perintah `git remote add origin <url>`. Kalau udah nyambung, kita bisa meng-upload simpenan kerjaan kita dari lokal ke GitHub pakai perintah `git push`. Sebaliknya, kalau kita mau mengunduh (download) perubahan terbaru dari GitHub ke laptop kita, kita bisa pakai `git fetch` atau `git pull`.
+--- Perintah Dasar & Menyimpan Perubahan ---
+* `git init`: Mengubah folder menjadi repository Git.
+* `git clone`: Menyalin repository dari tempat lain.
+* `git status`: Mengecek status repository.
+* `git add <file>`: Menambahkan file ke staging area.
+* `git commit -m "pesan"`: Menyimpan perubahan beserta pesannya.
+* `git commit -am "pesan"`: Menyimpan semua perubahan (langsung melewati staging).
 
-3. Serunya Menulis dengan Markdown
-Terakhir, kita belajar soal Markdown. Ini tuh format penulisan dokumen yang jadi favorit banget di kalangan developer dan programmer, biasanya dipakai buat nulis file README di repository GitHub. Cara nulisnya asyik dan gampang banget kok, ini beberapa contoh sintaks dasarnya:
-- Tinggal pakai simbol pagar (#) sebelum teks kalau mau bikin judul atau Heading.
-- Mau bikin teks tebal? Pakai tanda bintang ganda (**), sedangkan kalau mau miring cukup pakai bintang tunggal (*).
-- Buat bikin urutan atau list (daftar), kita bisa pakai angka biasa atau tanda hubung (-).
-- Kalau mau nyelipin link, ketik aja `[teks](url)` dan buat masukin gambar tinggal tambahin tanda seru di depannya jadi `![teks](url)`.
+2. GitHub & Remote Repository
+Remote repository adalah salinan pekerjaan kita di tempat lain (internet/jaringan). GitHub adalah platform hosting paling populer untuk menyimpan repository Git secara online.
+
+--- Perintah Menggunakan Remote ---
+* `git remote`: Menampilkan semua remote server.
+* `git remote add <nama> <url>`: Menambahkan remote baru (contoh: origin).
+* `git push <nama-remote> <nama-branch>`: Mengupload commit ke remote (GitHub).
+* `git fetch <nama>`: Mendownload data dari remote.
+* `git pull <nama-remote> <nama-branch>`: Mendownload dan langsung menggabungkan data dari remote ke branch saat ini.
+
+--- Perintah Membatalkan & Melihat Riwayat ---
+* `git reset`: Membatalkan penambahan ke staging area.
+* `git reset HEAD~1`: Membatalkan commit terakhir (perubahan tetap ada).
+* `git log`: Menampilkan riwayat commit.
+* `git log --oneline`: Menampilkan riwayat dengan lebih ringkas.
+
+3. Markdown, Branching, dan Merging
+Markdown adalah format dokumen yang praktis dan disukai programmer, sering dipakai untuk membuat file README di GitHub.
+- Judul/Heading: Pakai simbol `#` sebelum teks.
+- Teks tebal & miring: Pakai `**teks**` (tebal) atau `*teks*` (miring).
+- List/Daftar: Pakai angka (`1.`) atau tanda hubung (`-`).
+- Link & Gambar: Pakai `[teks](url)` untuk link, dan `![teks](url)` untuk gambar.
+
+--- Perintah Branching & Merging ---
+* `git branch <nama>`: Membuat cabang (branch) baru.
+* `git switch <nama-branch>`: Beralih ke branch lain.
+* `git merge <nama-branch>`: Menggabungkan branch lain ke branch saat ini.
+* `git rebase <nama-branch>`: Menggabungkan commit ke branch lain dengan riwayat yang lebih bersih.
+
